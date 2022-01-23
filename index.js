@@ -54,6 +54,10 @@ app.get("/health", (req, res) => {
 const productsAPI = require('./api/productsAPI');
 app.use(productsAPI);
 
+app.post("/api/products", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
 const httpServer = http.createServer(app);
 
 httpServer.listen(port, () => {
