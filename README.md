@@ -1,6 +1,8 @@
 # StoreApp\
 
 Development phases\
+
+
 Phase 1: master branch\
   Renamed main branch to master\
   Deployed app base for nodejs
