@@ -1,4 +1,4 @@
-const client = require("../loaders/client.js");
+const client = require("../loaders/client");
 
 exports.getProductById = async (id) => {
     try {

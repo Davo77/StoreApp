@@ -9,6 +9,15 @@ const fs = require('fs');
 const client = require('./loaders/client.js');
 const open = require('open');
 const fetch = require('node-fetch');
+const cors = require('cors');
+
+app.use(cors());
+
+app.use('/login', (req, res) => {
+  res.send({
+    token: 'test123'
+  });
+});
 
 app.use(bodyParser.json())
 app.use(
@@ -57,6 +66,9 @@ app.use(productsAPI);
 app.post("/api/products", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
+
+const customerSalesAPI = require('./api/customerAPI');
+app.use(customerSalesAPI);
 
 const httpServer = http.createServer(app);
 

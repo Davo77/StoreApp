@@ -1,66 +1,29 @@
 import React from 'react';
-import axios from 'axios';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Store from './Store';
+import Login from './Login';
+import useToken from './useToken';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-      this.state = {
-        data: []
-              }
-      }
-      componentDidMount(){
-        //Get all users details in bootstrap table
-        axios.get('/api/products').then(res => 
-        {
-        //Storing users detail in state array object
-        this.setState({data: res.data});
-      
-           }); 
-        
-        }
-        render() {
-        return (
-     
 
-          <div className="maincontainer">
-            
-            
-           
-            <table>
-              <thead>
-              <h1>Welcome to generic store</h1>
-                <tr>
-                  <th>Product</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-              {this.state.data.map((result) => {
-                return (
-                 
-                     <tr>
-                      
-                      <td>{result.name}</td>
+function App() {
 
-                      <td>{result.price}</td>
-                  
-                      
-                    </tr>
-                 
-                )
-              })}
-               
-                
-              </tbody>
-            </table>
-            
-                
-  
-         
-          </div>
-          
-    )
-    };
-    }
-    export default App;
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    return <Login setToken={setToken} />
+  }
+
+  return (
+    <div className="wrapper">
+      <Store />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/store" exact component={Store} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
