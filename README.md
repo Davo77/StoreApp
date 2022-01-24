@@ -1,6 +1,6 @@
 # StoreApp\
 
-Development phases\
+Development phases
 
 
 Phase 1: master branch\
