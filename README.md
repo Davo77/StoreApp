@@ -6,7 +6,7 @@ Phase 1: master branch\
   Deployed app base for nodejs
   
 Phase 2: user_authentication branch\
-  Basic user authentication and DB initialization\
+  Basic user authentication and DB initialization
   
 Phase 3: api branch\ 
   Added basic models and controllers for api environment\
