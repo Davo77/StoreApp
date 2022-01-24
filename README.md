@@ -1,7 +1,8 @@
 # StoreApp\
 
 Development phases\
-Phase 1:\
+Phase 1: master branch\
+  Renamed main bracnh to master\
   Deployed app base for nodejs\
   
 Phase 2: user_authentication branch\
