@@ -2,8 +2,8 @@
 
 Development phases\
 Phase 1: master branch\
-  Renamed main bracnh to master\
-  Deployed app base for nodejs\
+  Renamed main branch to master\
+  Deployed app base for nodejs
   
 Phase 2: user_authentication branch\
   Basic user authentication and DB initialization\
@@ -12,7 +12,7 @@ Phase 3: api branch\
   Added basic models and controllers for api environment\
   
 Phase 4: ReactFront branch\
-  Added frontend  with React\
+  Added frontend  with React
   
 Phase 5: Amount_of_sales_discount\
   Added discount type for amount of sales (over 100 previous sales for customer validates the discount)\
