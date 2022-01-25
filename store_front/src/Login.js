@@ -3,15 +3,19 @@ import PropTypes from 'prop-types';
 import './Login.css';
 
 async function loginUser(credentials) {
+ let token = localStorage.getItem('token')
  return fetch('http://localhost:8080/login', {
    method: 'POST',
    headers: {
-     'Content-Type': 'application/json'
+     'Content-Type': 'application/json',
+     'Authorization': 'Bearer ' + token
    },
    body: JSON.stringify(credentials)
  })
    .then(data => data.json())
 }
+
+
 
 export default function Login({ setToken }) {
   const [name, setName] = useState();
@@ -25,6 +29,8 @@ export default function Login({ setToken }) {
       password
     });
     setToken(token);
+    localStorage.setItem('user', JSON.stringify(name));
+    console.log(token);
   }
 /*
   const handleSubmit = async e => {

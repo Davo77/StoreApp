@@ -9,3 +9,13 @@ exports.getCustomerSalesById = async (request, response) => {
     response.status(404).send({ message: err.message });
   }
 };
+
+exports.getCustomerSpecialDiscountById  = async (request, response) => {
+  try {
+    let { user_id } = request.params;
+    const customerSpecialPriceRecord = await customerSalesModel.getCustomerSpecialDiscountById (user_id);
+    response.status(200).send(customerSpecialPriceRecord);
+  } catch (err) {
+    response.status(404).send({ message: err.message });
+  }
+};
