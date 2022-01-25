@@ -3,12 +3,12 @@
 To run the app:
 
 BACKEND\
-In project root level (../storeApp)\ 
+In project root level (../storeApp) \ 
 $ npm install\
 $ node index.js 
 
 FRONTEND\
-In react folder (../storeApp/store_front)\
+In react folder (../storeApp/store_front) \
 $ npm install\
 $ npm start
 
