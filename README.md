@@ -1,6 +1,9 @@
 # StoreApp
 
-To run the app:
+To run the app:\
+Duplicate db with
+storeDBdump, that can be found at project root level (../storeApp/storeDBdump)
+
 
 BACKEND\
 In project root level (../storeApp/store_front)\
