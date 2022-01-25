@@ -34,7 +34,7 @@ app.use(session({
 app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
 })
-
+/*
 app.get('/', function(request, response) {
 	response.sendFile(path.join(__pages + '/login.html'));
 });
@@ -48,7 +48,7 @@ app.get('/home', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/pages/login.html');
 });
-
+*/
 
 client.connect()
  .then(() => console.log('DB client connected'))
@@ -69,6 +69,10 @@ app.post("/api/products", (req, res) => {
 
 const customerSalesAPI = require('./api/customerAPI');
 app.use(customerSalesAPI);
+
+const specialPriceAPI = require('./api/specialAPI');
+app.use(specialPriceAPI);
+
 
 const httpServer = http.createServer(app);
 

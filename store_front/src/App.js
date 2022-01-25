@@ -19,7 +19,7 @@ function App() {
       <Store />
       <BrowserRouter>
         <Routes>
-          <Route path="/store" exact component={Store} />
+          <Route exact path="/store" component={Store} />
         </Routes>
       </BrowserRouter>
     </div>

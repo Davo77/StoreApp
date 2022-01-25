@@ -12,7 +12,7 @@ exports.getAllProducts = async (request, response) => {
 exports.getProductById = async (request, response) => {
   try {
     let { id } = request.params;
-    const productRecord = await productModel.getProductById(id);
+    const productRecord = await productsModel.getProductById(id);
     response.status(200).send(productRecord);
   } catch (err) {
     response.status(404).send({ message: err.message });
