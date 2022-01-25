@@ -2,7 +2,7 @@
 
 To run the app:
 
-BACKEND
+BACKEND\
 In project root level (../storeApp):\ 
 $ npm install\
 $ node index.js 
